@@ -64,6 +64,10 @@ function switchSession() {
       currentSession = "longBreak";
       timeLeft = longBreakMinutes * 60;
       alert("長い休憩の時間です");
+    } else {
+      currentSession = "shortBreak"
+      timeLeft = shortBreakMinutes * 60;
+      alert("短い休憩の時間です");
     }
   } else {
     currentSession = "work";
@@ -85,8 +89,8 @@ function loadSettings() {
   }
   
   workMinutesInput.value = workMinutes;
-  shortBreakMinutes = parseInt(shortBreakMinutesInput.value);
-  longBreakMinutes = parseInt(longBreakMinutesInput.value);
+  shortBreakMinutesInput.value = shortBreakMinutes;
+  longBreakMinutesInput.value = longBreakMinutes;
 }
 
 function saveSettings() {
